@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,700;1,800&family=Satisfy&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: EB+Garamond, sans-serif;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+h3{
+    font-family: Josefin+Slab;
+    font-size: 24px;
+}
+p{
+    font-family: Bodoni Moda, sans-serif;
+}
+.logo{
+    height: 50px;
+    width: 80px;
+    margin: auto auto;
+}
+
+.logo img{
+    height: 40px;
+    width: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+nav a{
+    background-color: transparent;
+    flex:1;
+    text-align: center;
+    margin: 1em;
+    padding: 0.25em;
+    text-decoration: none;
+    color: green;
+    font-family: Satisfy,sans-serif;
+    
+}
+
+img{
+    width:80px;
+    height:30px;
+}
+
+input{
+    margin: 40px 40px;
+    padding: 20px;
+    width: 60%;
+    height: 40px;
+    display: block;
+}
+
+
+nav a:hover{
+    color: blue;
+}
+
+
+
+nav a:active{
+    color:deeppink
+}
+
+.Grid-Container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin: 20px 20px;
+    
+}
+
+.Image-Card{
+    
+    width: 300px;
+    background-color: gainsboro;
+    
+}
+
+.Text-Card {
+    padding: 16px 16px;
+    height: 200px;
+}
+#img{
+    width: 100%;
+    height:300px;
+    object-fit: fill;
+}
+
+@media  (max-width:500px){
+    .Grid-Container{
+        display: inline;
+    }
+}
+.spinner{
+    height: 100%;
+    width:100%
+}
