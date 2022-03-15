@@ -75,6 +75,7 @@ a:hover{
     color:white;
     padding: 20px;
     font-size: 20px;
+    margin: 15px 15px;
 }
 
 .ImageBoards{
@@ -106,15 +107,20 @@ a:hover{
 .singleNewsImages{
     width: 100vh;
     height: 60vh;
-    margin: 20px 40px;
+    margin: 20px auto;
+
+    display: block;
+    
 
 }
 .singleNewsTitles{
     color: black;
     margin: 10px 10px;
+    text-align: center;
 }
 .singleNewsContents{
     margin: 16px;
+    
 
 }
 .Contact-Form{
@@ -130,7 +136,7 @@ a:hover{
 }
 
 .textAreaClass{
-    margin: 10px ;
+    margin: 10px 35px ;
 }
 
 .inputFlex{
@@ -154,6 +160,7 @@ display: flex;
 .submitButton{
     height: 40px;
     width:100%;
+    color:blue;
 }
 
 .listOfPosts{
@@ -161,5 +168,5 @@ display: flex;
     background-color:#faf0e6;
     color:black;
     min-height: 50px;
-    min-width: 400px;
+    width: 400px;
 }

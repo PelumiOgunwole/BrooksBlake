@@ -2,8 +2,6 @@ import {React, useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import DOMPurify from 'dompurify'
-import ReactHtmlParser from 'react-html-parser'
-import parser from 'html-react-parser'
 
 const ReadNews = () => {
   const {id} = useParams()
@@ -31,17 +29,17 @@ const ReadNews = () => {
     
   }, [id] 
   )
-  // Destrucuring the title and content from API data to avoid calling of names
-  //const {content:rendered}=singlePageNews
   
-  const{title:rendered}=singlePageNews
-  
-  //console.log(rendered)
+  // code to get current time
+  const today= new Date()
+  const time= today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
 
   const processSubmit= (event)=>{
     // event.preventDefault() avoids reloading when form is submitted
     event.preventDefault()
-    setSubmit(comments,name,email)
+    setSubmit(comments)
+    
     // Empty the form input tags immediately when button is clicked
     setComments("")
     setName("")
@@ -69,14 +67,15 @@ const ReadNews = () => {
 
     
   }
+  console.log(submit)
   return (
     <div className='NewsContent'>
         
         <img className='singleNewsImages' src={singlePageNews.jetpack_featured_media_url} ></img>
         {/*  Purposely done to allow api data run before rendering default DOM*/}
-        <div className='singleNewsTitles'  key={singlePageNews.id} > 
+        <h1 className='singleNewsTitles'  key={singlePageNews.id} > 
           {singlePageNews.title && (<div dangerouslySetInnerHTML={{ __html: singlePageNews.title.rendered }}></div> ) }
-        </div>
+        </h1>
 
         <div className='singleNewsContents'  key={singlePageNews.id} > 
           {singlePageNews.content && (<div dangerouslySetInnerHTML={{ __html: singlePageNews.content.rendered }}></div> ) }
@@ -84,6 +83,7 @@ const ReadNews = () => {
         
         <div className='listOfPosts'>
           <h3> {submit} </h3>
+          
           
 
         </div>
