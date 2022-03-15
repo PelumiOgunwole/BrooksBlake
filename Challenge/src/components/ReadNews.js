@@ -73,9 +73,13 @@ const ReadNews = () => {
     <div className='NewsContent'>
         
         <img className='singleNewsImages' src={singlePageNews.jetpack_featured_media_url} ></img>
-        {/*  Purposely done to prevent Scripting Attacks*/}
+        {/*  Purposely done to allow api data run before rendering default DOM*/}
         <div className='singleNewsTitles'  key={singlePageNews.id} > 
-          {parser(['title']['rendered'])}
+          {singlePageNews.title && (<div dangerouslySetInnerHTML={{ __html: singlePageNews.title.rendered }}></div> ) }
+        </div>
+
+        <div className='singleNewsContents'  key={singlePageNews.id} > 
+          {singlePageNews.content && (<div dangerouslySetInnerHTML={{ __html: singlePageNews.content.rendered }}></div> ) }
         </div>
         
         <div className='listOfPosts'>
