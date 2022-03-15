@@ -39,7 +39,7 @@ const ReadNews = () => {
   //console.log(rendered)
 
   const processSubmit= (event)=>{
-
+    // event.preventDefault() avoids reloading when form is submitted
     event.preventDefault()
     setSubmit(comments,name,email)
     // Empty the form input tags immediately when button is clicked
