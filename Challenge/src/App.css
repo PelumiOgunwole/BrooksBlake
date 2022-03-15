@@ -1,0 +1,165 @@
+:root {
+    --blue: #6495ed;
+    --white: #faf0e6;
+    --black:#000000;
+    --red:#FF0000;
+    --springgreen: #00FF7F;
+    --teal: #008080;
+  }
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=EB+Garamond:ital,wght@0,400;1,700;1,800&family=Inter:wght@200&family=Satisfy&family=Titillium+Web:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: EB+Garamond, sans-serif;
+}
+html, body {
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color: var(--teal);
+    opacity: 0.7;
+    height:60px;
+    width:100%;
+    margin: 0px 0px 1px 0px;
+    
+}
+
+
+ul{
+    display: flex;
+    padding: 0px 0px;
+    
+    
+}
+li{
+    list-style-type: none;
+    padding: 2vh 6vw;
+    
+}
+li a{
+    text-decoration: none;
+    color: var(--white);
+    
+}
+li img{
+    width: 6vw;
+    height:8vh;
+    
+    
+}
+li:nth-child(1){
+    padding: 0px;
+}
+a:hover{
+    color: var(--blue)
+}
+
+.Container{
+    background-color: var(--black);
+    
+    height: 100%;
+}
+
+.newsCards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.News{
+    min-height: 100px;
+    width:300px;
+    background-color: #008080;
+    color:white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.ImageBoards{
+    height: 150px;
+    min-width: 250px;
+    padding: 12px;
+    object-fit: fill;
+
+}
+
+.ReadButton{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.NewsContent{
+    background-color: white;
+    height: '100vh';
+    min-height : '100vh';
+    width:100vw;
+    color:black;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--white);
+    
+}
+
+
+
+.singleNewsImages{
+    width: 100vh;
+    height: 60vh;
+    margin: 20px 40px;
+
+}
+.singleNewsTitles{
+    color: black;
+    margin: 10px 10px;
+}
+.singleNewsContents{
+    margin: 16px;
+
+}
+.Contact-Form{
+    background-color: var(--teal);
+    width: 500px;
+    height: 230px;
+    margin: 10px 300px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    position:relative;
+
+}
+
+.textAreaClass{
+    margin: 10px ;
+}
+
+.inputFlex{
+display: flex;
+
+
+}
+.inputItems{
+    margin: 10px;
+    height: 20px;
+    width: 160px;
+    padding: 10px;
+    
+}
+
+.Labels{
+    color:blue;
+
+}
+
+.submitButton{
+    height: 40px;
+    width:100%;
+}
+
+.listOfPosts{
+    margin: 20px;
+    background-color:#faf0e6;
+    color:black;
+    min-height: 50px;
+    min-width: 400px;
+}
